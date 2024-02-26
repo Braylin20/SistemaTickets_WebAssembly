@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaTicketsAssembly", "SistemaTicketsAssembly.csproj", "{C11E0BBF-8344-4A22-9231-30E09168411B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemaTicketsAssembly", "SistemaTicketsAssembly.csproj", "{C11E0BBF-8344-4A22-9231-30E09168411B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaTicketsAssembly.Api", "..\SistemaTicketsAssembly.Api\SistemaTicketsAssembly.Api.csproj", "{65CC2F9D-AD17-4675-813E-79EF4B9E70E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemaTicketsAssembly.Api", "..\SistemaTicketsAssembly.Api\SistemaTicketsAssembly.Api.csproj", "{65CC2F9D-AD17-4675-813E-79EF4B9E70E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
