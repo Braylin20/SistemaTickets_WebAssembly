@@ -22,9 +22,9 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <label class="fw-bold">ClienteID:</label>
-                    <InputNumber @bind-Value="tickets.TicketId" class="form-control"></InputNumber>
-                    <ValidationMessage For="@(() => tickets.TicketId)" />
+                    <label class="fw-bold">Asunto:</label>
+                    <InputText @bind-Value="tickets.Asunto" class="form-control"></InputText>
+                    <ValidationMessage For="@(() => tickets.Asunto)" />
                 </div>
                 <div class="col-6">
                     <label class="fw-bold">SolicitadoPor:</label>
@@ -33,12 +33,7 @@
                 </div>
             </div>
                 <div>
-                <label class="fw-bold">Asunto:</label>
-                    <InputText @bind-Value="tickets.Asunto" class="form-control"></InputText>
-                    <ValidationMessage For="@(() => tickets.Asunto)" />
-                </div>
-                <div >
-                <label class="fw-bold">Descripci&oacute;n:</label>
+                    <label class="fw-bold">Descripci&oacute;n:</label>
                     <InputTextArea @bind-Value="tickets.Descripcion" class="form-control"></InputTextArea>
                     <ValidationMessage For="@(() => tickets.Descripcion)" />
                 </div>
