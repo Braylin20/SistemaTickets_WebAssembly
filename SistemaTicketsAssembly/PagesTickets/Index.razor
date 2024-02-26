@@ -3,7 +3,7 @@
 
 <div class="card shadow-lg">
     <div class="card-header">
-        <h3>Consulta Reloj</h3>
+        <h3>Consulta Ticket</h3>
     </div>
 
     <div class="card-body">
@@ -41,7 +41,7 @@
             </div>
 
             <div class="mb-3 d-flex justify-content-end">
-                <a href="Create" class="btn btn-success">Create</a>
+                <a href="Create" class="btn btn-success bi-floppy-fill">Create</a>
             </div>
         </div>
 
@@ -66,9 +66,9 @@
                         <td>@item.Descripcion</td>
                         <td>@item.Fecha</td>
                         <td>
-                            <a href="/Eliminar/@item.TicketId" class="btn btn-danger bi bi-trash-fill"></a>
-                            <a href="/Edit/@item.TicketId" class="btn btn-primary bi-box-arrow-up-right"></a>
-                            <a href="/Info/@item.TicketId" class="btn btn-warning bi bi-info-square"></a>
+                            <a href="/EliminarTickets/@item.TicketId" class="btn btn-danger bi bi-trash-fill"></a>
+                            <a href="/EditTickets/@item.TicketId" class="btn btn-primary bi-box-arrow-up-right"></a>
+                            <a href="/Details/@item.TicketId" class="btn btn-warning bi bi-info-square"></a>
                         </td>
                     </tr>
                 }
@@ -79,8 +79,6 @@
 
 
 @code {
-
-    public int Filtro { get; set; }
     public List<Tickets>? ListaTickets { get; set; } = new List<Tickets>();
     public Tickets? tickets { get; set; } = new Tickets();
     public int Conteo { get; set; }
@@ -95,12 +93,12 @@
 
     public async Task Buscar()
     {
-        if (Filtro == 1 && tickets!.TicketId > 0)
+        if (Opcion == 1 && tickets!.TicketId > 0)
         {
             ListaTickets = (await httpClient.GetFromJsonAsync<List<Tickets>>($"api/Tickets"))!.Where(t => t.TicketId == tickets!.TicketId).ToList();
             StateHasChanged();
         }else
-        if(Filtro == 2 && !string.IsNullOrEmpty(tickets!.Descripcion))
+        if(Opcion == 2 && !string.IsNullOrEmpty(tickets!.Descripcion))
         {
             ListaTickets = (await httpClient.GetFromJsonAsync<List<Tickets>>($"api/Tickets"))!.Where(t => t.Descripcion!.ToLower() == tickets!.Descripcion.ToLower()).ToList();
             StateHasChanged();
